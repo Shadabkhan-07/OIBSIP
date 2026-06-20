@@ -1,0 +1,269 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+    line-height:1.8;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 8%;
+    gap:60px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero-text h3{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 32px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(56,189,248,.4);
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:340px;
+    border-radius:20px;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,.4);
+}
+
+/* ===========================
+   Common Section
+=========================== */
+
+section{
+    padding:90px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    color:#38bdf8;
+    margin-bottom:40px;
+}
+
+/* ===========================
+   About
+=========================== */
+
+.about-box{
+    max-width:900px;
+    margin:auto;
+    background:#1e293b;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    transition:.4s;
+}
+
+.about-box:hover{
+    transform:translateY(-8px);
+}
+
+/* ===========================
+   Achievement
+=========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:.4s;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(56,189,248,.3);
+}
+
+/* ===========================
+   Quote
+=========================== */
+
+.quote{
+    text-align:center;
+}
+
+.quote h2{
+    color:#38bdf8;
+    margin-bottom:25px;
+}
+
+blockquote{
+    max-width:850px;
+    margin:auto;
+    font-size:24px;
+    font-style:italic;
+    color:#e2e8f0;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:30px;
+}
+
+footer p{
+    margin:8px 0;
+    color:#94a3b8;
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+.hero,
+.about-box,
+.card,
+blockquote{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:15px;
+}
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-image img{
+    width:260px;
+}
+
+.hero-text h1{
+    font-size:38px;
+}
+
+blockquote{
+    font-size:20px;
+}
+
+}
